@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+
+.nav-btn {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	padding-bottom: 6px;
+	color: #ffffff;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+	color: #1d4ed8;
+}
+
+.nav-btn-line {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #ffffff;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+	pointer-events: none;
+}
+
+.nav-btn:hover .nav-btn-line {
+	transform: scaleX(1);
+}
+
+.icon:hover {
+	opacity: 0.5;
+}
