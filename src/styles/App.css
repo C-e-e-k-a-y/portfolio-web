@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant hover (&:hover);
-
+@theme {
+  --background-image-mobile-bg: url('/intro-bg-phone.png');
+  --background-image-tablet-bg: url('/intro-bg-tab.png');
+  --background-image-laptop-bg: url('/intro-bg-laptop.png');
+}
 .nav-btn {
 	position: relative;
 	display: inline-block;

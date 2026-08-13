@@ -1,17 +1,20 @@
 import './styles/App.css';
 // import Navbar from './components/Navbar';
-import introBg from './assets/intro-bg.png';
+// import introBgPhone from './assets/intro-bg-phone.png';
+// import introBgTab from './assets/intro-bg-tab.png';
+// import introBgLaptop from './assets/intro-bg-laptop.png';
 import ProfileCard from './components/ProfileCard';
 import Section from './components/Section';
 import ProjectCard from './components/ProjectCard';
 import BackToTop from './components/BackToTop';
+import ContactForm from './components/ContactForm';
+import ContactLink from './components/ContactLink';
 
 function App() {
 
   return (
     <div id="main-scroll-container"
-      className="max-h-screen max-w-screen bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
-      style={{ backgroundImage: `url(${introBg})` }}
+      className="h-screen w-full max-h-screen max-w-screen bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
     >
 
       <Section id="home" className="my-auto h-screen flex items-center justify-center transition ease-in-out duration-500">
@@ -121,52 +124,21 @@ function App() {
 
       <Section id="contact" className="h-screen my-auto relative flex-col content-center justify-center">
         <div className="text-center">
+          <p className="text-md font-thin mb-2">— LET'S TALK —</p>
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg">
             Have a question or want to work together?<br /> Feel free to reach out to me for any inquiries, freelance, contract or full-time opportunities.
           </p>
         </div>
 
-        <form className="mt-6 flex flex-col items-center space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            name="name" autoComplete="off"
-            className="bg-gray-800 text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:ring-2 hover:ring-blue-500 w-[80%] md:w-[50%] h-10 rounded-md p-4"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            name="email" autoComplete="off"
-            className="bg-gray-800 text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:ring-2 hover:ring-blue-500 w-[80%] md:w-[50%] h-10 rounded-md p-4"
-          />
-          <textarea
-            placeholder="Your Message"
-            name="message" autoComplete="off"
-            rows={2}
-            className="bg-gray-800 text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-[80%] md:w-[50%] resize-none rounded-md p-4 hover:ring-2 hover:ring-blue-500"
-          ></textarea>
-          <button
-            type="submit"
-            className="rounded-lg bg-blue-500 px-4 py-2 hover:bg-blue-600"
-          >
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
 
-        <div className="mt-10 flex justify-center space-x-4">
-          <a href="mailto:cihieri01@gmail.com" className="text-blue-500 hover:text-blue-700 rounded-full p-2 bg-gray-800 hover:bg-gray-700">
-            <i className="fas fa-envelope"></i> Email Me
-          </a>
-          <a href="https://github.com/C-e-e-k-a-y" className="text-blue-500 hover:text-blue-700 rounded-full p-2 bg-gray-800 hover:bg-gray-700">
-            <i className="fab fa-github"></i> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/chibuike-ihieri/" className="text-blue-500 hover:text-blue-700 rounded-full p-2 bg-gray-800 hover:bg-gray-700">
-            <i className="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://twitter.com/cihieri" className="text-blue-500 hover:text-blue-700 rounded-full p-2 bg-gray-800 hover:bg-gray-700">
-            <i className="fab fa-twitter"></i> Twitter
-          </a>
+        <div className="mt-10 flex flex-wrap justify-center items-center space-x-2 space-y-2 mx-auto">
+          <ContactLink address="mailto:cihieri01@gmail.com" label="Email" className="fa-envelope" />
+          <ContactLink address="https://github.com/C-e-e-k-a-y" label="GitHub" className="fa-github" />
+          <ContactLink address="https://www.linkedin.com/in/chibuike-ihieri/" label="LinkedIn" className="fa-linkedin" />
+          <ContactLink address="https://twitter.com/cihieri" label="Twitter" className="fa-twitter" />
+          <ContactLink address="https://wa.me/2349044841046" label="WhatsApp" className="fa-whatsapp" />
         </div>
 
         <div className="text-center absolute bottom-4 left-0 right-0">

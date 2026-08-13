@@ -6,7 +6,7 @@ export default () => {
     <div id="about-image" className="relative size-60 md:size-80 lg:w-fit lg:max-h-[70vh]">
       
       {/* 1. Offset Border Layer */}
-      <div className="absolute lg:-inset-1 lg:translate-x-5 lg:translate-y-5 border-2 border-indigo-500/30 rounded-3xl pointer-events-none h-full w-full lg:rounded-none" />
+      <div className="absolute lg:-inset-1 lg:translate-x-3 lg:translate-y-3 bg-linear-to-br from-cyan-500 via-blue-500 to-purple-500 lg:bg-none border-2 border-blue-500/70 rounded-3xl pointer-events-none h-full w-full lg:rounded-none" />
 
       {/* 2. Main Image Container */}
       <div className="flex relative z-10 w-full h-full items-center justify-center">
