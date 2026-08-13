@@ -3,8 +3,8 @@ import introPic from '../assets/intro-pic.png';
 export default () => {
   return (
     // Outer Wrapper: Provides padding so the offset elements don't get cut off
-    <div id="about-image" className="relative size-60 md:size-80 lg:w-fit lg:max-h-[70vh]">
-      
+    <div id="about-image" className="relative size-60 md:size-80 lg:w-fit lg:size-100 lg:max-h-[80vh]">
+
       {/* 1. Offset Border Layer */}
       <div className="absolute lg:-inset-1 lg:translate-x-3 lg:translate-y-3 bg-linear-to-br from-cyan-500 via-blue-500 to-purple-500 lg:bg-none border-2 border-blue-500/70 rounded-3xl pointer-events-none h-full w-full lg:rounded-none" />
 

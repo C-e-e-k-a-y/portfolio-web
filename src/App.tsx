@@ -1,14 +1,12 @@
 import './styles/App.css';
-// import Navbar from './components/Navbar';
-// import introBgPhone from './assets/intro-bg-phone.png';
-// import introBgTab from './assets/intro-bg-tab.png';
-// import introBgLaptop from './assets/intro-bg-laptop.png';
 import ProfileCard from './components/ProfileCard';
 import Section from './components/Section';
 import ProjectCard from './components/ProjectCard';
 import BackToTop from './components/BackToTop';
 import ContactForm from './components/ContactForm';
 import ContactLink from './components/ContactLink';
+import StatusBadge from './components/StatusBadge';
+import Navigation from './components/Navigation';
 
 function App() {
 
@@ -16,37 +14,44 @@ function App() {
     <div id="main-scroll-container"
       className="h-screen w-full max-h-screen max-w-screen bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
     >
+      <div className="fixed top-10 left-0 w-full h-fit z-50 px-5 md:p-2 flex items-center justify-between">
+        <h1 className="text-2xl md:text-3xl font-bold backdrop-blur-md pl-3 md:pl-10">CEEKAY</h1>
+
+        <StatusBadge />
+      </div>
+
+      <Navigation />
 
       <Section id="home" className="my-auto h-screen flex items-center justify-center transition ease-in-out duration-500">
 
-          <div id="intro-text" className="text-center xl:w-[60%]">
+        <div id="intro-text" className="text-center xl:w-[60%]">
 
-            <h1 className="text-[clamp(2.5rem,10vw,4.5rem)] font-bold tracking-tight">
+          <h1 className="text-[clamp(2.5rem,10vw,4.5rem)] font-bold tracking-tight">
             Chibuike Ihieri
-            </h1>
+          </h1>
 
-            <p className="text-[clamp(1.5rem,6vw,2.5rem)] mt-2 font-semibold">
-              Web Developer
-            </p>
+          <p className="text-[clamp(1.5rem,6vw,2.5rem)] mt-2 font-semibold">
+            Web Developer
+          </p>
 
-            <p className="text-[clamp(1rem,3vw,1.5rem)] mt-4 lg:px-4">
-              I create responsive, beautiful, and user-friendly web applications that meet the needs of clients and users alike.
-            </p>
+          <p className="text-[clamp(1rem,3vw,1.5rem)] mt-4 lg:px-4">
+            I create responsive, beautiful, and user-friendly web applications that meet the needs of clients and users alike.
+          </p>
 
-            <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4 lg:space-y-0">
+          <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4 lg:space-y-0">
 
-              <button value="View Projects" className="rounded-lg bg-blue-500 px-4 py-2 hover:bg-blue-600">View Projects</button>
+            <button value="View Projects" className="rounded-lg bg-blue-500 px-4 py-2 hover:bg-blue-600">View Projects</button>
 
-              <button value="Get in Touch" className="rounded-lg bg-green-500 px-4 py-2 hover:bg-green-600">Get in Touch</button>
-              
-              <button value="Download CV" className="rounded-lg bg-yellow-500 px-4 py-2 hover:bg-yellow-600">Download CV</button>
+            <button value="Get in Touch" className="rounded-lg bg-green-500 px-4 py-2 hover:bg-green-600">Get in Touch</button>
 
-            </div>
+            <button value="Download CV" className="rounded-lg bg-yellow-500 px-4 py-2 hover:bg-yellow-600">Download CV</button>
 
           </div>
-        
+
+        </div>
+
       </Section>
-      
+
       <Section id="about" className="h-screen my-auto flex items-center justify-center space-y-4 lg:space-x-10 lg:flex-row flex-col">
 
         <ProfileCard />
@@ -68,7 +73,7 @@ function App() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
           <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="list-disc list-inside">
@@ -126,7 +131,7 @@ function App() {
         <div className="text-center">
           <p className="text-md font-thin mb-2">— LET'S TALK —</p>
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-lg">
+          <p className="text-lg md:w-2/3 mx-auto">
             Have a question or want to work together?<br /> Feel free to reach out to me for any inquiries, freelance, contract or full-time opportunities.
           </p>
         </div>

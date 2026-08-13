@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -17,7 +17,7 @@ const ContactForm = () => {
   const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
@@ -45,43 +45,43 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="mt-6 flex flex-col items-center space-y-4">
-        <input
+      <input
         type="text"
         placeholder="Your Name" required
         name="name" autoComplete="off" onChange={handleChange} value={formData.name}
         className="text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:ring-2 hover:ring-blue-500 w-[80%] md:w-[50%] h-10 rounded-md p-4"
-        />
-        <input
+      />
+      <input
         type="email"
         placeholder="Your Email" required
         name="email" autoComplete="off" onChange={handleChange} value={formData.email}
         className="text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:ring-2 hover:ring-blue-500 w-[80%] md:w-[50%] h-10 rounded-md p-4"
-        />
-        <input
+      />
+      <input
         type="text"
         placeholder="Subject" required
         name="subject" autoComplete="off" onChange={handleChange} value={formData.subject}
         className="text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:ring-2 hover:ring-blue-500 w-[80%] md:w-[50%] h-10 rounded-md p-4"
-        />
-        <textarea
+      />
+      <textarea
         placeholder="Your Message" required
         name="message" autoComplete="off" onChange={handleChange} value={formData.message}
         rows={2}
         className="text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-[80%] md:w-[50%] resize-none rounded-md p-4 hover:ring-2 hover:ring-blue-500"
-        ></textarea>
-        <button
+      ></textarea>
+      <button
         type="submit" disabled={isSubmitting}
-        className="rounded-lg bg-blue-500 px-4 py-2 hover:bg-blue-600"
-        >
+        className="rounded-lg mt-2 bg-blue-500 px-4 py-2 hover:bg-blue-600"
+      >
         {isSubmitting ? 'Sending...' : 'Send Message'}
-        </button>
+      </button>
 
-        {/* Success / Error Feedback Message */}
-        {statusMessage && (
-          <p className={`text-sm ${statusMessage.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
-            {statusMessage.text}
-          </p>
-        )}
+      {/* Success / Error Feedback Message */}
+      {statusMessage && (
+        <p className={`text-sm ${statusMessage.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+          {statusMessage.text}
+        </p>
+      )}
     </form>
   );
 };
