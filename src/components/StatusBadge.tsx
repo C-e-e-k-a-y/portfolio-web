@@ -1,6 +1,6 @@
 export default function StatusBadge() {
     return (
-        <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-800/80 bg-slate-950/60 px-4 py-1.5 backdrop-blur-md shadow-sm">
+        <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-800/80 bg-slate-950/60 px-4 py-1.5 backdrop-blur-md shadow-sm md:mr-5">
             {/* Animated Ping / Glowing Dot Container */}
             <span className="relative flex h-2.5 w-2.5 items-center justify-center">
                 {/* Pulsing Outer Aura */}
@@ -11,7 +11,7 @@ export default function StatusBadge() {
             </span>
 
             {/* Monospace Label Text */}
-            <span className="font-mono text-md font-medium text-slate-300 tracking-wide">
+            <span className="font-mono text-sm font-medium text-slate-300 tracking-wide">
                 Available for work
             </span>
         </div>

@@ -13,7 +13,7 @@ export default () => {
         <img
           src={introPic}
           alt="Profile"
-          className="h-[95%] w-[95%] lg:h-full lg:w-full object-cover rounded-3xl lg:rounded-none object-top"
+          className="h-[97%] w-[97%] lg:h-full lg:w-full object-cover rounded-3xl lg:rounded-none object-top"
         />
       </div>
 

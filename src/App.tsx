@@ -7,6 +7,9 @@ import ContactForm from './components/ContactForm';
 import ContactLink from './components/ContactLink';
 import StatusBadge from './components/StatusBadge';
 import Navigation from './components/Navigation';
+import { Mail, MapPinned, Phone } from 'lucide-react';
+import WebDev from './assets/Web Dev Course.jfif';
+import Python from './assets/Python Course.jfif';
 
 function App() {
 
@@ -15,7 +18,7 @@ function App() {
       className="h-screen w-full max-h-screen max-w-screen bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
     >
       <div className="fixed top-10 left-0 w-full h-fit z-50 px-5 md:p-2 flex items-center justify-between">
-        <h1 className="text-2xl md:text-3xl font-bold backdrop-blur-md pl-3 md:pl-10">CEEKAY</h1>
+        <h1 className="text-2xl md:text-3xl font-mono font-bold tracking-wide backdrop-blur-md pl-3 md:pl-10 text-transparent [-webkit-text-stroke:1px_white]">CEEKAY</h1>
 
         <StatusBadge />
       </div>
@@ -26,7 +29,7 @@ function App() {
 
         <div id="intro-text" className="text-center xl:w-[60%]">
 
-          <h1 className="text-[clamp(2.5rem,10vw,4.5rem)] font-bold tracking-tight">
+          <h1 className="text-[clamp(2.5rem,10vw,4.5rem)] text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-blue-500 font-bold tracking-tight">
             Chibuike Ihieri
           </h1>
 
@@ -40,11 +43,11 @@ function App() {
 
           <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4 lg:space-y-0">
 
-            <button value="View Projects" className="rounded-lg bg-blue-500 px-4 py-2 hover:bg-blue-600">View Projects</button>
+            <button value="View Projects" className="rounded-lg bg-blue-500/15 px-4 py-2 border border-blue-400 hover:bg-linear-to-br hover:from-blue-700 hover:to-grey-900">View Projects</button>
 
-            <button value="Get in Touch" className="rounded-lg bg-green-500 px-4 py-2 hover:bg-green-600">Get in Touch</button>
+            <button value="Get in Touch" className="rounded-lg bg-cyan-500/15 px-4 py-2 border border-green-400 hover:bg-linear-to-br hover:from-green-700 hover:to-grey-900">Get in Touch</button>
 
-            <button value="Download CV" className="rounded-lg bg-yellow-500 px-4 py-2 hover:bg-yellow-600">Download CV</button>
+            <button value="Download CV" className="rounded-lg bg-black px-4 py-2 border border-purple-400 hover:bg-linear-to-br hover:from-purple-700 hover:to-gray-900">Download CV</button>
 
           </div>
 
@@ -58,68 +61,106 @@ function App() {
 
         <div id="about-text" className="lg:w-[60%]">
           <h2 className="text-[clamp(1.5rem,6vw,2.5rem)] text-center font-bold mb-4">Who am I ?</h2>
-          <p className="text-lg">
-            I'm Chibuike Ihieri, a <span className="font-semibold">Software Engineer</span> specialized in <span className="font-semibold">web development</span>. I'm highly enthusiastic about building quality software applications that solve real-world problems as well as provide pleasant user experiences. I enjoy converting beatiful user interfaces into functional web applications and continuously learning new technologies to enhance my skills. <br /> <br />
-            Apart from coding, I also enjoy movies, video games, watching youtube videos, and attending tech events. I believe in continuous self-improvement, and networking which drives me to be a better developer and person every day.
+          <p className="text-lg md:text-xl">
+            I'm Chibuike Ihieri, a <span className="font-semibold">Software Engineer</span> specialized in <span className="font-semibold">web development</span>, and a graduate of <span className="font-semibold">Computer Science</span> from the <span className="font-semibold">University of Nigeria</span>.</p>
+
+          <p className="text-lg md:text-xl mt-2 md:mt-3">I'm passionate about building quality software applications that solve real-world problems as well as provide pleasant user experiences. I enjoy converting beatiful UIs into functional web applications.</p>
+
+          <p className="text-lg md:text-xl mt-2 md:mt-3">Apart from coding, I also enjoy movies, video games, watching youtube videos, and attending tech events. I believe in continuous self-improvement, and networking which drives me to be a better developer and person every day.
           </p>
         </div>
       </Section>
 
       <Section id="skills" className="h-screen my-auto flex-col content-center justify-center">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">My Skills</h2>
-          <p className="text-lg">
-            I have a diverse set of skills that I have acquired through my experience in web development. Here are some of the technologies and tools I am proficient in:
+          <p className="text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
+          <h2 className="text-3xl font-bold mb-3">Stack</h2>
+          <p className="text-lg md:text-xl">
+            Here are the set of tools and technologies I've gained proficiency in through my experience in web development.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-            <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-            <ul className="list-disc list-inside">
-              <li>React</li>
-              <li>Next.js</li>
-              <li>Tailwind CSS</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
+        <div className="lg:w-[85vw] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-2 mt-3">
+          <div className="bg-purple-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 className="text-xl text-center font-semibold border-b mb-2">Frontend</h3>
+            <ul className="list-inside flex gap-2 flex-wrap">
+              <li>» React</li>
+              <li>» Tailwind CSS</li>
+              <li>» JavaScript</li>
+              <li>» TypeScript</li>
             </ul>
           </div>
 
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-            <h3 className="text-xl font-semibold mb-2">Backend</h3>
-            <ul className="list-disc list-inside">
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Postgres</li>
-              <li>SQL</li>
+          <div className="bg-blue-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 className="text-xl text-center font-semibold border-b mb-2">Backend</h3>
+            <ul className="list-inside flex gap-2 flex-wrap">
+              <li>» Node.js</li>
+              <li>» Express.js</li>
+              <li>» Python</li>
+              <li>» Postgres</li>
+              <li>» SQL</li>
             </ul>
           </div>
 
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-            <h3 className="text-xl font-semibold mb-2">Tools & Platforms</h3>
-            <ul className="list-disc list-inside">
-              <li>Git & GitHub</li>
-              <li>Docker</li>
-              <li>Vercel</li>
-              <li>Render</li>
+          <div className="bg-blue-600/50 lg:bg-purple-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 className="text-xl text-center font-semibold border-b mb-2">Tools</h3>
+            <ul className="list-inside flex gap-2 flex-wrap">
+              <li>» Git & GitHub</li>
+              <li>» Docker</li>
+              <li>» Render</li>
             </ul>
           </div>
 
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-            <h3 className="text-xl font-semibold mb-2">Other Skills</h3>
-            <ul className="list-disc list-inside">
-              <li>Problem Solving</li>
-              <li>Responsive Design</li>
-              <li>UI/UX Design Principles</li>
+          <div className="bg-purple-600/50 lg:bg-blue-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 className="text-xl text-center font-semibold border-b mb-2">Other Skills</h3>
+            <ul className="list-inside flex gap-2 flex-wrap">
+              <li>» Responsive Design</li>
+              <li>» UI/UX Design Principles</li>
             </ul>
+          </div>
+        </div>
+
+        <hr className="mt-3" />
+        <hr className="mt-1" />
+
+        <div className="mt-2 text-center">
+          <h2 className="text-3xl font-bold mb-4">Certification</h2>
+          <div className="bg-grey-500 flex justify-center gap-2 md:gap-3">
+            <div className="flex-col w-[30%]  lg:w-[20%] items-center">
+              <img
+                src={WebDev}
+                alt="Profile"
+                className="size-20 w-full md:h-40 mb-1"
+              />
+              <p className="text-md md:text-xl">The Complete Full-Stack Web Development Bootcamp</p>
+            </div>
+
+            <div className="flex-col w-[30%] lg:w-[20%] items-center">
+              <img
+                src={Python}
+                alt="Profile"
+                className="size-20 w-full md:h-40 mb-1"
+              />
+              <p className="text-md md:text-xl">100 Days of Code™: The Complete Python Pro Bootcamp</p>
+            </div>
+
+            <div className="flex-col w-[30%] lg:w-[20%] items-center">
+              <img
+                src={WebDev}
+                alt="Profile"
+                className="size-20 w-full md:h-40 mb-1"
+              />
+              <p className="text-md md:text-xl">B.Sc Computer Science (Hons)</p>
+            </div>
           </div>
         </div>
       </Section>
 
       <Section id="projects" className="h-screen my-auto flex-col content-center justify-center">
         <div className="text-center">
+          <p className="text-md font-thin mb-2">— PORTFOLIO —</p>
           <h2 className="text-3xl font-bold mb-4">View My Work</h2>
-          <p className="text-lg">
+          <p className="text-lg md:text-lg">
             Here are some of the projects I have worked on. Each project showcases my skills in web development and my ability to create efficient solutions.
           </p>
         </div>
@@ -128,7 +169,7 @@ function App() {
       </Section>
 
       <Section id="contact" className="h-screen my-auto relative flex-col content-center justify-center">
-        <div className="text-center">
+        <div className="text-center mt-4">
           <p className="text-md font-thin mb-2">— LET'S TALK —</p>
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg md:w-2/3 mx-auto">
@@ -136,9 +177,37 @@ function App() {
           </p>
         </div>
 
-        <ContactForm />
+        <div className="flex flex-col md:flex-row items-center justify-around md:w-[80vw] mx-auto mt-4 gap-2 lg:gap-10">
+          <div id="contact-details" className="flex flex-wrap md:flex-col items-center md:items-start justify-center gap-4 text-sm md:text-xl w-fit mb-2 bg-blue-400/10 p-1 md:p-4 rounded-lg backdrop-blur-md border border-blue-400">
+            <div className="flex items-center gap-2 ">
+              <Mail className="size-7 md:size-10 border-2 rounded-lg p-1" />
+              <div className="flex flex-col">
+                <span className="font-bold">Email:</span>
+                <span>cihieri01@gmail.com</span>
+              </div>
+            </div>
 
-        <div className="mt-10 flex flex-wrap justify-center items-center space-x-2 space-y-2 mx-auto">
+            <div className="flex items-center gap-2">
+              <Phone className="size-7 md:size-10 border-2 rounded-lg p-1" />
+              <div className="flex flex-col">
+                <span className="font-bold">Phone:</span>
+                <span>+234 904 484 1046</span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MapPinned className="size-7 md:size-10 border-2 rounded-lg p-1" />
+              <div className="flex flex-col">
+                <span className="font-bold">Location:</span>
+                <span>Lagos, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+          <ContactForm />
+        </div>
+
+        <div className="mt-5 md:mt-10 flex flex-wrap justify-center items-center space-x-2 space-y-2 mx-auto">
           <ContactLink address="mailto:cihieri01@gmail.com" label="Email" className="fa-envelope" />
           <ContactLink address="https://github.com/C-e-e-k-a-y" label="GitHub" className="fa-github" />
           <ContactLink address="https://www.linkedin.com/in/chibuike-ihieri/" label="LinkedIn" className="fa-linkedin" />
