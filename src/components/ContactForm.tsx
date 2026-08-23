@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Loader2, Send, Mail } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

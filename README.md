@@ -1,77 +1,59 @@
-# React + TypeScript + Vite
+# 💻 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive personal portfolio website built to showcase my technical skills, software engineering projects, and professional experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Design:** Optimized seamlessly for desktop, tablet, and mobile viewing.
+- **Dynamic Projects Section:** Interactive display cards showcasing core software projects.
+- **Contact Integration:** Fully functional contact form with automated email dispatch.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+), React.js
+- **Styling:** Tailwind CSS
+- **Deployment & Hosting:** Vercel
+- **Tools:** Git, Vite
 
-Note: This will impact Vite dev & build performances.
+## 📸 Screenshots
 
-## Expanding the ESLint configuration
+Desktop View Mobile View
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Follow these steps to run a local instance of this portfolio website on your computer.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Ensure you have Node.js installed on your local machine.
 
-```
+### Installation & Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Clone the repository:
+  `bash: git clone https://github.com`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Navigate into the project directory:
+  `bash: cd portfolio-website`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Install dependencies:
+  `bash: npm install`
 
+- Start the local development server:
+  `bash: npm run dev`
+
+- Open http://localhost:3000 in your browser to view the application.
+
+## 📂 Project Structure
+
+```text
+📂
+├── public/ # Static assets (images, icons, resume PDF)
+├── src/
+│   ├── assets/ # Main page sections (Hero, About, Projects, Contact)
+│   ├── components/ # Reusable UI components (Navbar, Footer, Button)
+│   ├── styles/ # Global styles and Tailwind configuration
+│   └── App.tsx # Main application entry point
+│   └── main.jsx        # Application entry point
+├── README.md
+└── package.json
 ```

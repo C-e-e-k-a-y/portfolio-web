@@ -3,13 +3,16 @@ import ProfileCard from './components/ProfileCard';
 import Section from './components/Section';
 import ProjectCard from './components/ProjectCard';
 import BackToTop from './components/BackToTop';
+import DownloadCVButton from './components/DownloadCV';
+import HeroTitle from './components/HeroTitle';
 import ContactForm from './components/ContactForm';
 import ContactLink from './components/ContactLink';
 import StatusBadge from './components/StatusBadge';
 import Navigation from './components/Navigation';
-import { Mail, MapPinned, Phone } from 'lucide-react';
+import { Mail, MapPinned, Phone, GraduationCap, Link, FolderGit2 } from 'lucide-react';
 import WebDev from './assets/Web Dev Course.jfif';
 import Python from './assets/Python Course.jfif';
+import UnnLogo from './assets/UNN logo.jfif';
 
 function App() {
 
@@ -33,21 +36,19 @@ function App() {
             Chibuike Ihieri
           </h1>
 
-          <p className="text-[clamp(1.5rem,6vw,2.5rem)] mt-2 font-semibold">
-            Web Developer
-          </p>
+          <HeroTitle />
 
-          <p className="text-[clamp(1rem,3vw,1.5rem)] mt-4 lg:px-4">
+          <p className="text-[clamp(1rem,3vw,1.2rem)] mt-4 lg:px-4 border-t border-b backdrop:blur-md py-2 italic">
             I create responsive, beautiful, and user-friendly web applications that meet the needs of clients and users alike.
           </p>
 
           <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4 lg:space-y-0">
 
-            <button value="View Projects" className="rounded-lg bg-blue-500/15 px-4 py-2 border border-blue-400 hover:bg-linear-to-br hover:from-blue-700 hover:to-grey-900">View Projects</button>
+            <button value="View Projects" className="rounded-lg bg-blue-500/15 px-4 py-2 border border-blue-400 hover:bg-linear-to-br hover:from-blue-700 hover:to-grey-900"><a href="#projects" className="flex items-center gap-2"><FolderGit2 className="w-5 h-5" /> View Projects</a></button>
 
-            <button value="Get in Touch" className="rounded-lg bg-cyan-500/15 px-4 py-2 border border-green-400 hover:bg-linear-to-br hover:from-green-700 hover:to-grey-900">Get in Touch</button>
+            <button value="Get in Touch" className="rounded-lg bg-cyan-500/15 px-4 py-2 border border-green-400 hover:bg-linear-to-br hover:from-green-700 hover:to-grey-900"><a href="#contact" className="flex items-center gap-2"><Link className="w-5 h-5" /> Get in Touch</a></button>
 
-            <button value="Download CV" className="rounded-lg bg-black px-4 py-2 border border-purple-400 hover:bg-linear-to-br hover:from-purple-700 hover:to-gray-900">Download CV</button>
+            <DownloadCVButton />
 
           </div>
 
@@ -71,7 +72,7 @@ function App() {
         </div>
       </Section>
 
-      <Section id="skills" className="h-screen my-auto flex-col content-center justify-center">
+      <Section id="skills" className="h-screen my-auto flex-col md:content-center content-end justify-center items-center">
         <div className="text-center">
           <p className="text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
           <h2 className="text-3xl font-bold mb-3">Stack</h2>
@@ -120,11 +121,14 @@ function App() {
           </div>
         </div>
 
-        <hr className="mt-3" />
-        <hr className="mt-1" />
+        <hr className="mt-3 lg:w-[80%] mx-auto" />
+        <hr className="mt-1 lg:w-[80%] mx-auto" />
 
         <div className="mt-2 text-center">
-          <h2 className="text-3xl font-bold mb-4">Certification</h2>
+          <h2 className="text-3xl font-bold mb-4 flex w-fit mx-auto items-center gap-2">
+            <GraduationCap className="size-10 md:size-12" />
+            Courses Completed
+          </h2>
           <div className="bg-grey-500 flex justify-center gap-2 md:gap-3">
             <div className="flex-col w-[30%]  lg:w-[20%] items-center">
               <img
@@ -146,7 +150,7 @@ function App() {
 
             <div className="flex-col w-[30%] lg:w-[20%] items-center">
               <img
-                src={WebDev}
+                src={UnnLogo}
                 alt="Profile"
                 className="size-20 w-full md:h-40 mb-1"
               />
