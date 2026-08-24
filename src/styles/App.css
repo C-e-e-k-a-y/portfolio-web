@@ -60,3 +60,19 @@
 .animate-blink {
   animation: blink 1s infinite;
 }
+
+@theme {
+  --animate-bounce-left: bounceLeft 1s infinite;
+
+  @keyframes bounceLeft {
+    0%,
+    100% {
+      transform: translateX(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateX(-10px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}

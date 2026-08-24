@@ -10,6 +10,8 @@ import ContactLink from './components/ContactLink';
 import StatusBadge from './components/StatusBadge';
 import Navigation from './components/Navigation';
 import { Mail, MapPinned, Phone, GraduationCap, Link, FolderGit2 } from 'lucide-react';
+import ScrollDownIndicator from './components/ScrollDown';
+import NavIndicator from './components/NavIndicator';
 import WebDev from './assets/Web Dev Course.jfif';
 import Python from './assets/Python Course.jfif';
 import UnnLogo from './assets/UNN logo.jfif';
@@ -38,8 +40,8 @@ function App() {
 
           <HeroTitle />
 
-          <p className="text-[clamp(1rem,3vw,1.2rem)] mt-4 lg:px-4 border-t border-b backdrop:blur-md py-2 italic">
-            I create responsive, beautiful, and user-friendly web applications that meet the needs of clients and users alike.
+          <p className="text-[clamp(1rem,3vw,1.2rem)] mt-4 lg:px-4 backdrop:blur-md py-2 italic md:w-[80%] lg:w-full mx-auto">
+            I create responsive, user-friendly web applications that meet the needs of clients and users alike.
           </p>
 
           <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4 lg:space-y-0">
@@ -52,6 +54,14 @@ function App() {
 
           </div>
 
+        </div>
+
+        <div className="absolute top-3/4 right-5 -translate-y-1/2">
+          <NavIndicator />
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <ScrollDownIndicator />
         </div>
 
       </Section>
@@ -82,7 +92,7 @@ function App() {
         </div>
 
         <div className="lg:w-[85vw] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-2 mt-3">
-          <div className="bg-purple-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div className="bg-purple-600/20 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
             <h3 className="text-xl text-center font-semibold border-b mb-2">Frontend</h3>
             <ul className="list-inside flex gap-2 flex-wrap">
               <li>» React</li>
@@ -92,7 +102,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="bg-blue-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div className="bg-blue-600/20 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
             <h3 className="text-xl text-center font-semibold border-b mb-2">Backend</h3>
             <ul className="list-inside flex gap-2 flex-wrap">
               <li>» Node.js</li>
@@ -103,7 +113,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="bg-blue-600/50 lg:bg-purple-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div className="bg-blue-600/20 lg:bg-purple-600/20 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
             <h3 className="text-xl text-center font-semibold border-b mb-2">Tools</h3>
             <ul className="list-inside flex gap-2 flex-wrap">
               <li>» Git & GitHub</li>
@@ -112,7 +122,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="bg-purple-600/50 lg:bg-blue-600/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div className="bg-purple-600/20 lg:bg-blue-600/20 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
             <h3 className="text-xl text-center font-semibold border-b mb-2">Other Skills</h3>
             <ul className="list-inside flex gap-2 flex-wrap">
               <li>» Responsive Design</li>
