@@ -60,4 +60,4 @@ Ensure you have Node.js installed on your local machine.
 
 ## Screenshot (Hero Section)
 
-![Hero Section](Portfolio-Site.png)
+![Hero Section](public/Portfolio-Site.png)
