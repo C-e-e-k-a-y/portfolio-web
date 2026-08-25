@@ -9,18 +9,24 @@ import ContactForm from './components/ContactForm';
 import ContactLink from './components/ContactLink';
 import StatusBadge from './components/StatusBadge';
 import Navigation from './components/Navigation';
-import { Mail, MapPinned, Phone, GraduationCap, Link, FolderGit2 } from 'lucide-react';
+import { Mail, MapPinned, Phone, Link, FolderGit2 } from 'lucide-react';
+import Gmail from './assets/icons/gmail-icon.svg?react';
+import GitHub from './assets/icons/github-icon.svg?react';
+import LinkedIn from './assets/icons/linkedin-square-icon.svg?react';
+import X from './assets/icons/x-social-media-black-icon.svg?react';
+import WhatsApp from './assets/icons/wa-whatsapp-icon.svg?react';
 import ScrollDownIndicator from './components/ScrollDown';
 import NavIndicator from './components/NavIndicator';
 import WebDev from './assets/Web Dev Course.jfif';
 import Python from './assets/Python Course.jfif';
 import UnnLogo from './assets/UNN logo.jfif';
 
+
 function App() {
 
   return (
     <div id="main-scroll-container"
-      className="h-screen w-full max-h-screen max-w-screen bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
+      className="h-dvh w-full max-h-dvh max-w-dvw bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
     >
       <div className="fixed top-10 left-0 w-full h-fit z-50 px-5 md:p-2 flex items-center justify-between">
         <h1 className="text-2xl md:text-3xl font-mono font-bold tracking-wide backdrop-blur-md pl-3 md:pl-10 text-transparent [-webkit-text-stroke:1px_white]">CEEKAY</h1>
@@ -30,9 +36,9 @@ function App() {
 
       <Navigation />
 
-      <Section id="home" className="my-auto h-screen flex items-center justify-center transition ease-in-out duration-500">
+      <Section id="home" className="my-auto h-dvh flex items-center justify-center transition ease-in-out duration-500">
 
-        <div id="intro-text" className="text-center xl:w-[60%]">
+        <div id="intro-text" className="text-center">
 
           <h1 className="text-[clamp(2.5rem,10vw,4.5rem)] text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-blue-500 font-bold tracking-tight">
             Chibuike Ihieri
@@ -40,11 +46,11 @@ function App() {
 
           <HeroTitle />
 
-          <p className="text-[clamp(1rem,3vw,1.2rem)] mt-4 lg:px-4 backdrop:blur-md py-2 italic md:w-[80%] lg:w-full mx-auto">
+          <p className="text-[clamp(1rem,3vw,1.2rem)] mt-4 lg:px-4 backdrop:blur-md py-2 italic md:w-[80%] mx-auto">
             I create responsive, user-friendly web applications that meet the needs of clients and users alike.
           </p>
 
-          <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4 lg:space-y-0">
+          <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4">
 
             <button value="View Projects" className="rounded-lg bg-blue-500/15 px-4 py-2 border border-blue-400 hover:bg-linear-to-br hover:from-blue-700 hover:to-grey-900"><a href="#projects" className="flex items-center gap-2"><FolderGit2 className="w-5 h-5" /> View Projects</a></button>
 
@@ -66,7 +72,7 @@ function App() {
 
       </Section>
 
-      <Section id="about" className="h-screen my-auto flex items-center justify-center space-y-4 lg:space-x-10 lg:flex-row flex-col">
+      <Section id="about" className="h-dvh my-auto flex items-center justify-center space-y-4 lg:space-x-10 lg:flex-row flex-col">
 
         <ProfileCard />
 
@@ -82,10 +88,10 @@ function App() {
         </div>
       </Section>
 
-      <Section id="skills" className="h-screen my-auto flex-col md:content-center content-end justify-center items-center">
+      <Section id="skills" className="h-dvh my-auto flex-col md:content-center content-end justify-center items-center">
         <div className="text-center">
           <p className="text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
-          <h2 className="text-3xl font-bold mb-3">Stack</h2>
+          <h2 className="text-3xl font-bold mb-3">Skills</h2>
           <p className="text-lg md:text-xl">
             Here are the set of tools and technologies I've gained proficiency in through my experience in web development.
           </p>
@@ -136,8 +142,7 @@ function App() {
 
         <div className="mt-2 text-center">
           <h2 className="text-3xl font-bold mb-4 flex w-fit mx-auto items-center gap-2">
-            <GraduationCap className="size-10 md:size-12" />
-            Courses Completed
+            Certifications
           </h2>
           <div className="bg-grey-500 flex justify-center gap-2 md:gap-3">
             <div className="flex-col w-[30%]  lg:w-[20%] items-center">
@@ -170,7 +175,7 @@ function App() {
         </div>
       </Section>
 
-      <Section id="projects" className="h-screen my-auto flex-col content-center justify-center">
+      <Section id="projects" className="h-dvh my-auto flex-col content-center justify-center">
         <div className="text-center">
           <p className="text-md font-thin mb-2">— PORTFOLIO —</p>
           <h2 className="text-3xl font-bold mb-4">View My Work</h2>
@@ -182,7 +187,7 @@ function App() {
         <ProjectCard />
       </Section>
 
-      <Section id="contact" className="h-screen my-auto relative flex-col content-center justify-center">
+      <Section id="contact" className="h-dvh my-auto relative flex-col content-center justify-center">
         <div className="text-center mt-4">
           <p className="text-md font-thin mb-2">— LET'S TALK —</p>
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
@@ -191,7 +196,7 @@ function App() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-around md:w-[80vw] mx-auto mt-4 gap-2 lg:gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-around md:w-[80vw] mx-auto my-5 gap-2 lg:gap-10">
           <div id="contact-details" className="flex flex-wrap md:flex-col items-center md:items-start justify-center gap-4 text-sm md:text-xl w-fit mb-2 bg-blue-400/10 p-1 md:p-4 rounded-lg backdrop-blur-md border border-blue-400">
             <div className="flex items-center gap-2 ">
               <Mail className="size-7 md:size-10 border-2 rounded-lg p-1" />
@@ -221,12 +226,12 @@ function App() {
           <ContactForm />
         </div>
 
-        <div className="mt-5 md:mt-10 flex flex-wrap justify-center items-center space-x-2 space-y-2 mx-auto">
-          <ContactLink address="mailto:cihieri01@gmail.com" label="Email" className="fa-envelope" />
-          <ContactLink address="https://github.com/C-e-e-k-a-y" label="GitHub" className="fa-github" />
-          <ContactLink address="https://www.linkedin.com/in/chibuike-ihieri/" label="LinkedIn" className="fa-linkedin" />
-          <ContactLink address="https://twitter.com/cihieri" label="Twitter" className="fa-twitter" />
-          <ContactLink address="https://wa.me/2349044841046" label="WhatsApp" className="fa-whatsapp" />
+        <div className="flex flex-wrap justify-center items-center gap-2 mx-auto">
+          <ContactLink address="mailto:cihieri01@gmail.com" svg={<Gmail />} />
+          <ContactLink address="https://github.com/C-e-e-k-a-y" svg={<GitHub />} />
+          <ContactLink address="https://www.linkedin.com/in/chibuike-ihieri/" svg={<LinkedIn />} />
+          <ContactLink address="https://twitter.com/ChibzTimmy" svg={<X />} />
+          <ContactLink address="https://wa.me/2349044841046" svg={<WhatsApp />} />
         </div>
 
         <div className="text-center absolute bottom-4 left-0 right-0">

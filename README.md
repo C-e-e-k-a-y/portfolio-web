@@ -57,3 +57,7 @@ Ensure you have Node.js installed on your local machine.
 ├── README.md
 └── package.json
 ```
+
+## Screenshot (Hero Section)
+
+![Hero Section](Portfolio-Site.png)
