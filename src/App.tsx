@@ -88,7 +88,7 @@ function App() {
         </div>
       </Section>
 
-      <Section id="skills" className="h-dvh my-auto flex-col content-center justify-center items-center">
+      <Section id="skills" className="h-dvh my-auto flex-col md:content-center content-end justify-center items-center">
         <div className="text-center">
           <p className="font-oswald text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
           <h2 className="font-roboto text-3xl font-bold mb-3">Skills</h2>
