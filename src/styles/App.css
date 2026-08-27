@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
 @import "tailwindcss";
 @custom-variant hover (&:hover);
 @theme {
   --background-image-mobile-bg: url("/intro-bg-phone.png");
   --background-image-tablet-bg: url("/intro-bg-tab.png");
   --background-image-laptop-bg: url("/intro-bg-laptop.png");
+  --font-oswald: "Oswald", sans-serif;
+  --font-roboto: "Roboto Slab", serif;
 }
 .nav-btn {
   position: relative;

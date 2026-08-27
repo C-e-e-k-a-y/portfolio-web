@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div id="main-scroll-container"
-      className="h-dvh w-full max-h-dvh max-w-dvw bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
+      className="font-sans h-dvh w-full max-h-dvh max-w-dvw bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
     >
       <div className="fixed top-10 left-0 w-full h-fit z-50 px-5 md:p-2 flex items-center justify-between">
         <h1 className="text-2xl md:text-3xl font-mono font-bold tracking-wide backdrop-blur-md pl-3 md:pl-10 text-transparent [-webkit-text-stroke:1px_white]">CEEKAY</h1>
@@ -77,7 +77,7 @@ function App() {
         <ProfileCard />
 
         <div id="about-text" className="lg:w-[60%]">
-          <h2 className="text-[clamp(1.5rem,6vw,2.5rem)] text-center font-bold mb-4">Who am I ?</h2>
+          <h2 className="font-roboto text-[clamp(1.5rem,6vw,2.5rem)] text-center font-bold mb-4">Who am I ?</h2>
           <p className="text-lg md:text-xl">
             I'm Chibuike Ihieri, a <span className="font-semibold">Software Engineer</span> specialized in <span className="font-semibold">web development</span>, and a graduate of <span className="font-semibold">Computer Science</span> from the <span className="font-semibold">University of Nigeria</span>.</p>
 
@@ -90,8 +90,8 @@ function App() {
 
       <Section id="skills" className="h-dvh my-auto flex-col md:content-center content-end justify-center items-center">
         <div className="text-center">
-          <p className="text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
-          <h2 className="text-3xl font-bold mb-3">Skills</h2>
+          <p className="font-oswald text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
+          <h2 className="font-roboto text-3xl font-bold mb-3">Skills</h2>
           <p className="text-lg md:text-xl">
             Here are the set of tools and technologies I've gained proficiency in through my experience in web development.
           </p>
@@ -141,7 +141,7 @@ function App() {
         <hr className="mt-1 lg:w-[80%] mx-auto" />
 
         <div className="mt-2 text-center">
-          <h2 className="text-3xl font-bold mb-4 flex w-fit mx-auto items-center gap-2">
+          <h2 className="font-roboto text-3xl font-bold mb-4 flex w-fit mx-auto items-center gap-2">
             Certifications
           </h2>
           <div className="bg-grey-500 flex justify-center gap-2 md:gap-3">
@@ -177,8 +177,8 @@ function App() {
 
       <Section id="projects" className="h-dvh my-auto flex-col content-center justify-center">
         <div className="text-center">
-          <p className="text-md font-thin mb-2">— PORTFOLIO —</p>
-          <h2 className="text-3xl font-bold mb-4">View My Work</h2>
+          <p className="font-oswald text-md font-thin mb-2">— PORTFOLIO —</p>
+          <h2 className="font-roboto text-3xl font-bold mb-4">View My Work</h2>
           <p className="text-lg md:text-lg">
             Here are some of the projects I have worked on. Each project showcases my skills in web development and my ability to create efficient solutions.
           </p>
@@ -189,8 +189,8 @@ function App() {
 
       <Section id="contact" className="h-dvh my-auto relative flex-col content-center justify-center">
         <div className="text-center mt-4">
-          <p className="text-md font-thin mb-2">— LET'S TALK —</p>
-          <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
+          <p className="font-oswald text-md font-thin mb-2">— LET'S TALK —</p>
+          <h2 className="font-roboto text-3xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg md:w-2/3 mx-auto">
             Have a question or want to work together?<br /> Feel free to reach out to me for any inquiries, freelance, contract or full-time opportunities.
           </p>
