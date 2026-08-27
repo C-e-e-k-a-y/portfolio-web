@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div id="main-scroll-container"
-      className="font-sans h-dvh w-full max-h-dvh max-w-dvw bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
+      className="font-google-sans h-dvh w-full max-h-dvh max-w-dvw bg-mobile-bg md:bg-tablet-bg lg:bg-laptop-bg bg-cover bg-center bg-no-repeat snap-y snap-mandatory scroll-smooth overflow-auto scrollbar-none text-white"
     >
       <div className="fixed top-10 left-0 w-full h-fit z-50 px-5 md:p-2 flex items-center justify-between">
         <h1 className="text-2xl md:text-3xl font-mono font-bold tracking-wide backdrop-blur-md pl-3 md:pl-10 text-transparent [-webkit-text-stroke:1px_white]">CEEKAY</h1>
@@ -40,7 +40,7 @@ function App() {
 
         <div id="intro-text" className="text-center">
 
-          <h1 className="text-[clamp(2.5rem,10vw,4.5rem)] text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-blue-500 font-bold tracking-tight">
+          <h1 className="text-[clamp(3rem,10vw,5rem)] text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-blue-500 font-black tracking-tight">
             Chibuike Ihieri
           </h1>
 
@@ -88,7 +88,7 @@ function App() {
         </div>
       </Section>
 
-      <Section id="skills" className="h-dvh my-auto flex-col md:content-center content-end justify-center items-center">
+      <Section id="skills" className="h-dvh my-auto flex-col content-center justify-center items-center">
         <div className="text-center">
           <p className="font-oswald text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
           <h2 className="font-roboto text-3xl font-bold mb-3">Skills</h2>

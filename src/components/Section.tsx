@@ -18,7 +18,7 @@ export default function Section({ children, id, className }: SectionProps) {
           once: false,
         }}
         transition={{ duration: 1, ease: 'easeOut' }}
-        className={`p-5 ${className}`}
+        className={`p-5 md:p-8 ${className}`}
       >
         {children}
       </motion.div>

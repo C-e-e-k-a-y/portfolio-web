@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
 @import "tailwindcss";
 @custom-variant hover (&:hover);
 @theme {
@@ -7,6 +7,7 @@
   --background-image-laptop-bg: url("/intro-bg-laptop.png");
   --font-oswald: "Oswald", sans-serif;
   --font-roboto: "Roboto Slab", serif;
+  --font-google-sans: "Google Sans", sans-serif;
 }
 .nav-btn {
   position: relative;

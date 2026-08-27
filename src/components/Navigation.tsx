@@ -97,7 +97,7 @@ export default function Navigation() {
 
     return (
         <aside
-            className={`fixed right-0 z-50 flex flex-col items-end justify-center space-y-5 bg-grey-900/10 py-5 px-2 h-full backdrop-blur-md transition-all duration-500 lg:backdrop-blur-none lg:bg-transparent ease-out ${
+            className={`fixed right-0 lg:right-2 z-50 flex flex-col items-end justify-center space-y-5 bg-grey-900/10 py-5 px-2 h-full backdrop-blur-md transition-all duration-500 lg:backdrop-blur-none lg:bg-transparent ease-out ${
                 /* On desktop (lg:), it's always visible. On mobile/tablet (<lg), it slides in/out */
                 isMobileVisible
                     ? 'translate-x-0 opacity-100 pointer-events-auto'
