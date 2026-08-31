@@ -9,7 +9,7 @@ interface SectionProps {
 
 export default function Section({ children, id, className }: SectionProps) {
   return (
-    <section id={id} className={`snap-start ${className}`}>
+    <section id={id} className={`snap-start ${["home", "contact"].includes(id) ? "h-dvh" : "min-h-dvh content-center pt-15 md:pt-0"} `}>
       <motion.div
         initial={{ opacity: 0, y: 30 }} // Off-screen starting state
         whileInView={{ opacity: 1, y: 0 }} // Fades in and moves up when it re-enters view
@@ -18,7 +18,7 @@ export default function Section({ children, id, className }: SectionProps) {
           once: false,
         }}
         transition={{ duration: 1, ease: 'easeOut' }}
-        className={`p-5 md:p-8 ${className}`}
+        className={`p-5 md:p-8 h-full ${className}`}
       >
         {children}
       </motion.div>

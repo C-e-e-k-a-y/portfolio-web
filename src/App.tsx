@@ -37,7 +37,7 @@ function App() {
 
       <Navigation />
 
-      <Section id="home" className="my-auto h-dvh flex items-center justify-center transition ease-in-out duration-500">
+      <Section id="home" className="content-center">
 
         <div id="intro-text" className="text-center">
 
@@ -81,13 +81,13 @@ function App() {
           <NavIndicator />
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
           <ScrollDownIndicator />
         </div>
 
       </Section>
 
-      <Section id="about" className="h-dvh my-auto flex items-center justify-center space-y-4 lg:space-x-10 lg:flex-row flex-col">
+      <Section id="about" className="flex flex-col items-center justify-center gap-4 lg:gap-10 lg:flex-row ">
 
         <ProfileCard />
 
@@ -103,7 +103,7 @@ function App() {
         </div>
       </Section>
 
-      <Section id="skills" className="h-dvh my-auto flex-col md:content-center content-end justify-center items-center">
+      <Section id="skills" className="md:content-center content-end">
         <div className="text-center">
           <p className="font-oswald text-md md:text-lg font-thin mb-2">— SKILLS & CERTIFICATION —</p>
           <h2 className="font-roboto text-3xl font-bold mb-3">Skills</h2>
@@ -190,7 +190,7 @@ function App() {
         </div>
       </Section>
 
-      <Section id="projects" className="h-dvh my-auto flex-col content-center justify-center">
+      <Section id="projects" className="content-center">
         <div className="text-center">
           <p className="font-oswald text-md font-thin mb-2">— PORTFOLIO —</p>
           <h2 className="font-roboto text-3xl font-bold mb-4">View My Work</h2>
@@ -202,7 +202,7 @@ function App() {
         <ProjectCard />
       </Section>
 
-      <Section id="contact" className="h-dvh my-auto relative flex-col content-center justify-center">
+      <Section id="contact" className="relative content-center pt-13 md:pt-8">
         <div className="text-center mt-4">
           <p className="font-oswald text-md font-thin mb-2">— LET'S TALK —</p>
           <h2 className="font-roboto text-3xl font-bold mb-4">Get In Touch</h2>
@@ -241,7 +241,7 @@ function App() {
           <ContactForm />
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-2 mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-2 mx-auto mb-5">
           <ContactLink address="mailto:cihieri01@gmail.com" svg={<Gmail />} />
           <ContactLink address="https://github.com/C-e-e-k-a-y" svg={<GitHub />} />
           <ContactLink address="https://www.linkedin.com/in/chibuike-ihieri/" svg={<LinkedIn />} />
@@ -249,7 +249,7 @@ function App() {
           <ContactLink address="https://wa.me/2349044841046" svg={<WhatsApp />} />
         </div>
 
-        <div className="text-center absolute bottom-4 left-0 right-0">
+        <div className="text-center absolute bottom-2 left-0 right-0">
           <p className="text-lg">
             &copy; {new Date().getFullYear()} Chibuike Ihieri
           </p>
