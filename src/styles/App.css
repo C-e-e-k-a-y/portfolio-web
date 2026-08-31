@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
 @import "tailwindcss";
 @custom-variant hover (&:hover);
 @theme {
@@ -9,6 +9,15 @@
   --font-roboto: "Roboto Slab", serif;
   --font-google-sans: "Google Sans", sans-serif;
 }
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background: #101115;
+}
+
 .nav-btn {
   position: relative;
   display: inline-block;
@@ -40,10 +49,6 @@
 
 .nav-btn:hover .nav-btn-line {
   transform: scaleX(1);
-}
-
-.icon:hover {
-  opacity: 0.5;
 }
 
 @media (width > 425px) {

@@ -20,6 +20,7 @@ import NavIndicator from './components/NavIndicator';
 import WebDev from './assets/Web Dev Course.jfif';
 import Python from './assets/Python Course.jfif';
 import UnnLogo from './assets/UNN logo.jfif';
+import { scrollToSection } from './utils/scrollToSection';
 
 
 function App() {
@@ -50,11 +51,25 @@ function App() {
             I create responsive, user-friendly web applications that meet the needs of clients and users alike.
           </p>
 
-          <div id="intro-buttons" className="mt-6 justify-content space-y-4 space-x-4">
+          <div id="intro-buttons" className="mt-6 flex flex-wrap justify-center gap-4">
 
-            <button value="View Projects" className="rounded-lg bg-blue-500/15 px-4 py-2 border border-blue-400 hover:bg-linear-to-br hover:from-blue-700 hover:to-grey-900"><a href="#projects" className="flex items-center gap-2"><FolderGit2 className="w-5 h-5" /> View Projects</a></button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('projects')}
+              className="rounded-lg bg-blue-500/15 px-4 py-2 border border-blue-400 hover:bg-linear-to-br hover:from-blue-700 hover:to-gray-900 flex items-center gap-2"
+            >
+              <FolderGit2 className="w-5 h-5" />
+              View Projects
+            </button>
 
-            <button value="Get in Touch" className="rounded-lg bg-cyan-500/15 px-4 py-2 border border-green-400 hover:bg-linear-to-br hover:from-green-700 hover:to-grey-900"><a href="#contact" className="flex items-center gap-2"><Link className="w-5 h-5" /> Get in Touch</a></button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('contact')}
+              className="rounded-lg bg-cyan-500/15 px-4 py-2 border border-green-400 hover:bg-linear-to-br hover:from-green-700 hover:to-gray-900 flex items-center gap-2"
+            >
+              <Link className="w-5 h-5" />
+              Get in Touch
+            </button>
 
             <DownloadCVButton />
 

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, type ReactElement, cloneElement } from 'react';
 import { House, User, Code2, FolderGit2, Headset } from 'lucide-react';
+import { scrollToSection } from '../utils/scrollToSection';
 
 interface NavItem {
     id: string;
@@ -23,7 +24,7 @@ export default function Navigation() {
     const touchStartRef = useRef<number | null>(null);
     const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    // Helper to trigger temporary 4s visibility for mobile
+    // Helper to trigger temporary 4s visibility for mobile when the user swipes from the right edge or taps the nav
     const triggerMobileNav = () => {
         setIsMobileVisible(true);
         setShowLabel(true);
@@ -33,7 +34,7 @@ export default function Navigation() {
         hideTimerRef.current = setTimeout(() => {
             setIsMobileVisible(false);
             setShowLabel(false);
-        }, 2000);
+        }, 4000);
     };
 
     // 1. Handle Active Section Intersection Observer
@@ -102,7 +103,7 @@ export default function Navigation() {
                 isMobileVisible
                     ? 'translate-x-0 opacity-100 pointer-events-auto'
                     : 'max-lg:translate-x-16 max-lg:opacity-0 max-lg:pointer-events-none lg:translate-x-0 lg:opacity-100'
-                }`}
+                }`} onClick={triggerMobileNav}
         >
             {NAV_ITEMS.map((item) => {
                 const isActive = activeSection === item.id;
@@ -112,7 +113,11 @@ export default function Navigation() {
                         key={item.id}
                         href={`#${item.id}`}
                         aria-label={item.label}
-                        onClick={() => triggerMobileNav()} // Resets the 4s timer if tapped
+                        onClick={(event) => {
+                            event.preventDefault();
+                            scrollToSection(item.id);
+                            triggerMobileNav();
+                        }}
                         className="group flex items-center space-x-5 lg:space-x-3 focus:outline-none"
                     >
                         {/* Label */}

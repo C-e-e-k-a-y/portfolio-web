@@ -34,24 +34,23 @@ export default function DownloadCVButton() {
     };
 
     return (
-        <button value="Download CV"
+        <button
+            type="button"
             onClick={handleDownload}
             disabled={isDownloading}
-            className="rounded-lg bg-black px-4 py-2 border border-purple-400 hover:bg-linear-to-br hover:from-purple-700 hover:to-gray-900"
+            className="flex items-center gap-2 rounded-lg bg-black px-4 py-2 border border-purple-400 hover:bg-linear-to-br hover:from-purple-700 hover:to-gray-900"
         >
-            <a className="flex items-center gap-2">
-                {isDownloading ? (
-                    <>
-                        <Loader2 className="h-5 w-5 animate-spin" />
-                        Downloading...
-                    </>
-                ) : (
-                    <>
-                        <Download className="h-5 w-5" />
-                        Download CV
-                    </>
-                )}
-            </a>
+            {isDownloading ? (
+                <>
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Downloading...
+                </>
+            ) : (
+                <>
+                    <Download className="h-5 w-5" />
+                    Download CV
+                </>
+            )}
         </button>
     );
 }
